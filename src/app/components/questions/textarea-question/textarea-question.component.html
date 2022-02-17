@@ -1,0 +1,5 @@
+<div *ngIf="question">
+  <p>{{ question.text }}</p>
+  <textarea rows="4" cols="50" [(ngModel)]="answer" (change)="answerChange()">
+  </textarea>
+</div>

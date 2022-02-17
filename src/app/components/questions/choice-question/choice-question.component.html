@@ -1,0 +1,18 @@
+<div *ngIf="question">
+  {{ question.text }}
+  <div
+    *ngFor="let option of question.options; let i = index"
+    class="Options-box"
+  >
+    <input
+      type="radio"
+      [id]="getOptionId(question.id, i)"
+      name="question.id"
+      value="option"
+      (change)="answerChange(option)"
+    />
+    <label [for]="getOptionId(question.id, i)" name="question.id">
+      {{ option }} {{ getOptionId(question.id, i) }}
+    </label>
+  </div>
+</div>

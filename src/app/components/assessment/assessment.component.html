@@ -1,0 +1,19 @@
+<div *ngIf="assessment">
+  <button
+    (click)="openAssessment()"
+    [ngClass]="open ? 'App-link-open' : 'App-link'"
+  >
+    {{ assessment.name }}
+  </button>
+  <p>{{ assessment.description }}</p>
+  <app-question-list
+    *ngIf="open && !answers"
+    [questions]="questions"
+    (answerOutput)="saveAnswer($event)"
+  ></app-question-list>
+  <app-answer-list
+    *ngIf="open && answers"
+    [questions]="questions"
+    [answers]="answers"
+  ></app-answer-list>
+</div>

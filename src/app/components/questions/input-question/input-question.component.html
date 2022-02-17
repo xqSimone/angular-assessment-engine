@@ -1,0 +1,4 @@
+<div *ngIf="question">
+  <p>{{ question.text }}</p>
+  <input type="text" [(ngModel)]="answer" (change)="answerChange()" />
+</div>

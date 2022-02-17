@@ -1,0 +1,8 @@
+<div>
+  <app-question
+    *ngFor="let question of questions"
+    [question]="question"
+    (answerOutput)="saveAnswer($event)"
+  ></app-question>
+  <button [disabled]="disabled" (click)="submit()">Submit</button>
+</div>

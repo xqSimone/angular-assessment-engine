@@ -1,0 +1,19 @@
+.App-link {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  font-family: arial, sans-serif;
+  color: #61dafb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.App-link-open {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  font-family: arial, sans-serif;
+  color: #fb6161;
+  text-decoration: underline;
+  cursor: pointer;
+}

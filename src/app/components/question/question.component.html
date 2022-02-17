@@ -1,0 +1,17 @@
+<div *ngIf="question" [ngSwitch]="question.type" class="Question-box"  >
+  <app-input-question
+    *ngSwitchCase="'input'"
+    [question]="question"
+    (answerOutput)="saveAnswer($event)"
+  ></app-input-question>
+  <app-textarea-question
+    *ngSwitchCase="'textarea'"
+    [question]="question"
+    (answerOutput)="saveAnswer($event)"
+  ></app-textarea-question>
+  <app-choice-question
+    *ngSwitchCase="'choice'"
+    [question]="question"
+    (answerOutput)="saveAnswer($event)"
+  ></app-choice-question>
+</div>
